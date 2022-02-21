@@ -3,7 +3,7 @@
 
 
 A light-weight reusable floating label form with validation.
-Online preview: <a href="www.ciaoshen.com/js-form-validation">ciaoshen.com/js-form-validation</a>
+Online preview: <a href="http://www.ciaoshen.com/js-form-validation/">ciaoshen.com/js-form-validation</a>
 
 <img src="./imgs/empty.png" height="250" alt="empty.png"> <img src="./imgs/valid.png" height="250" alt="valid.png"> <img src="./imgs/invalid.png" height="250" alt="invalid.png">
 
