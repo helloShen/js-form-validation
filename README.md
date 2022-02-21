@@ -1,4 +1,7 @@
 # form-validation
+![javascript](https://img.shields.io/badge/javascript-ES6-brightgreen)  ![flexbox](https://img.shields.io/badge/flexbox-1.0-brightgreen) ![css3](https://img.shields.io/badge/css-3.0-brightgreen) ![html5](https://img.shields.io/badge/html-5.0-brightgreen) ![svg](https://img.shields.io/badge/svg-1.1-brightgreen)
+
+
 A light-weight reusable floating label form with validation.
 Online preview: <a href="www.ciaoshen.com/js-form-validation">ciaoshen.com/js-form-validation</a>
 
