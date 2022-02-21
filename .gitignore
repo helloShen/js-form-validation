@@ -1,0 +1,5 @@
+# jetbrain config
+.vscode/
+
+# release archives
+release/
