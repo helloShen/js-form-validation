@@ -86,7 +86,7 @@ const emailForm = document.querySelector('.form-validation.email');
 /* email pattern */
 const emailPattern = /^[\w\.-]+@[\w-]+\.[\w-]{2,}$/g;
 /* bind pattern to the form */
-formValidation.bindPattern(emailForm, patterns.emailPattern);
+formValidation.bindPattern(emailForm, emailPattern);
 ```
 
 Happy coding!
