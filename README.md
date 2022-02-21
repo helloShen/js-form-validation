@@ -2,8 +2,11 @@
 ![javascript](https://img.shields.io/badge/javascript-ES6-brightgreen)  ![flexbox](https://img.shields.io/badge/flexbox-1.0-brightgreen) ![css3](https://img.shields.io/badge/css-3.0-brightgreen) ![html5](https://img.shields.io/badge/html-5.0-brightgreen) ![svg](https://img.shields.io/badge/svg-1.1-brightgreen)
 
 
-A light-weight reusable floating label form with validation.
-Online preview: <a href="http://www.ciaoshen.com/js-form-validation/">ciaoshen.com/js-form-validation</a>
+Need a sign-up or sign-in page or simple toolkit to craft one, but don't want a heavy CSS framework to disrupt your existing style? `form-validation` might be what you're looking for. It's a very light-weight reusable floating label form with pattern validation. 
+
+Nothing but 100 line pure javascript and css code library. You can add them anywhere of your project.
+
+It also comes with an out-of-the-box sign-up page. Feel free to use it directly in your project to safe your time. Online preview: <a href="http://www.ciaoshen.com/js-form-validation/">ciaoshen.com/js-form-validation</a>
 
 <img src="./imgs/empty.png" height="300" alt="empty.png"> <img src="./imgs/valid.png" height="300" alt="valid.png"> <img src="./imgs/invalid.png" height="300" alt="invalid.png">
 
@@ -32,7 +35,7 @@ Download the release `form-validation-v1.0` package. Unzip the package you will 
 
 
 ## Use directly the demo sign-up page
-To use directly the `sign-up.html` as your sign up page, or to customize your personal version based on it, the following files are **required**.
+To use directly the `sign-up.html` as your sign up page, or to customize your personal version based on it, the following files are **required**. Make sure that the svg icon files `check-circle-green.svg` and `x-circle-red.svg` are under `./assets/img/` direction.
 ```
 .
 ├── sign-up.html
@@ -51,7 +54,7 @@ To use directly the `sign-up.html` as your sign up page, or to customize your pe
 
 
 ## Use only the form-validation unit
-You can also use a single styled `form-validation` form alone whereever you want. 
+To implement a single `form-validation` form alone, you need,
 
 <img src="./imgs/email-empty.png" width="200" alt="email-empty.png">
 <img src="./imgs/email-valid.png" width="200" alt="email-valid.png">
@@ -85,7 +88,5 @@ const emailPattern = /^[\w\.-]+@[\w-]+\.[\w-]{2,}$/g;
 /* bind pattern to the form */
 formValidation.bindPattern(emailForm, patterns.emailPattern);
 ```
-
-Make sure that the svg icon files `check-circle-green.svg` and `x-circle-red.svg` are under `./assets/img/` direction.
 
 Happy coding!
