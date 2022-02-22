@@ -2,11 +2,13 @@
 ![javascript](https://img.shields.io/badge/javascript-ES6-brightgreen)  ![flexbox](https://img.shields.io/badge/flexbox-1.0-brightgreen) ![css3](https://img.shields.io/badge/css-3.0-brightgreen) ![html5](https://img.shields.io/badge/html-5.0-brightgreen) ![svg](https://img.shields.io/badge/svg-1.1-brightgreen)
 
 
-Need a sign-up or sign-in page or simple toolkit to craft one, but don't want a heavy CSS framework to disrupt your existing style? `form-validation` might be what you're looking for. It's a very light-weight reusable floating label form with pattern validation. 
+Need a sign-up or sign-in page or simple toolkit to craft one, but don't want a heavy CSS framework to disrupt your existing style? `form-validation` might be what you're looking for. 
 
-Nothing but 100 line pure javascript and css code library. You can add them anywhere of your project.
+It's a very light-weight reusable floating label form with pattern validation. Include 100 lines of pure javascript and css library into your project, then they are at your disposal.
 
-It also comes with an out-of-the-box sign-up page. Feel free to use it directly in your project to safe your time. Online preview: <a href="http://www.ciaoshen.com/js-form-validation/">ciaoshen.com/js-form-validation</a>
+<img src="./imgs/email-empty.png" width="200" alt="email-empty.png"> <img src="./imgs/email-valid.png" width="200" alt="email-valid.png"> <img src="./imgs/email-invalid.png" width="200" alt="email-invalid.png">
+
+It also comes with an out-of-the-box sign-up page. Feel free to use it directly in your project to safe your time. Here's the online preview: <a href="http://www.ciaoshen.com/js-form-validation/">ciaoshen.com/js-form-validation</a>
 
 <img src="./imgs/empty.png" height="300" alt="empty.png"> <img src="./imgs/valid.png" height="300" alt="valid.png"> <img src="./imgs/invalid.png" height="300" alt="invalid.png">
 
@@ -35,7 +37,8 @@ Download the release `form-validation-v1.0` package. Unzip the package you will 
 
 
 ## Use directly the demo sign-up page
-To use directly the `sign-up.html` as your sign up page, or to customize your personal version based on it, the following files are **required**. Make sure that the svg icon files `check-circle-green.svg` and `x-circle-red.svg` are under `./assets/img/` direction.
+To use directly the `sign-up.html` as your sign up page, or to customize your personal version based on it, the following files are **required**. 
+
 ```
 .
 ├── sign-up.html
@@ -50,19 +53,25 @@ To use directly the `sign-up.html` as your sign up page, or to customize your pe
     ├── form-validation.js
     └── sign-up.js
 ```
+Make sure that the svg icon files `check-circle-green.svg` and `x-circle-red.svg` are under `./assets/img/` direction.
 
 
 
-## Use only the form-validation unit
+## Reuse the form-validation unit
 To implement a single `form-validation` form alone, you need,
 
-<img src="./imgs/email-empty.png" width="200" alt="email-empty.png">
-<img src="./imgs/email-valid.png" width="200" alt="email-valid.png">
-<img src="./imgs/email-invalid.png" width="200" alt="email-invalid.png">
+First include `form-validation.css` into your own CSS file.
+```css
+@import url(./form-validation.css);
+```
+Also import `form-validation.js` into your javascript file,
+```js
+import { formValidation } from "./form-validation.js";
+```
 
-First, in the HTML page,
-1. Add a class `class="form-control"` to your `<input>` element.
-2. Wrap the `<input>` element with a `<div>` container, then add 2 classes: `class="form-floating form-validation"`.
+To create a `form-validation` in your HTML page,
+1. You need a pair of `<input>` and `<lable>` element. Then add a class `class="form-control"` to your `<input>` element.
+2. Wrap the `<input>` and `<label>` elements with a `<div>` container, then add 2 classes: `class="form-floating form-validation"`.
 
 The following code is an simple example,
 ```html
@@ -72,15 +81,10 @@ The following code is an simple example,
 </div>
 ```
 
-Then include `form-validation.css` into your own CSS file as follow,
-```css
-@import url(./form-validation.css);
-```
+At last, create a regular expression pattern. Invoke `formValidation.bindPattern()` API in your javascript file to bind the pattern to your own form element. 
 
-At last include the `form-validation.js` into your Javascript file. Create a pattern, call `formValidation.bindPattern()` API to bind it to your own form element. The following code is a simple example.
+That's all! With only 3 lines of code, you have this well designed floating label form with pattern validation.
 ```js
-import { formValidation } from "./form-validation.js";
-
 /* email form element */
 const emailForm = document.querySelector('.form-validation.email');
 /* email pattern */
@@ -89,4 +93,4 @@ const emailPattern = /^[\w\.-]+@[\w-]+\.[\w-]{2,}$/g;
 formValidation.bindPattern(emailForm, emailPattern);
 ```
 
-Happy coding!
+Life is hard, let's make it easy! Happy coding!
